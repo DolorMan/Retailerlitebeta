@@ -450,6 +450,11 @@
             Gets or sets the collection of http request headers.
             </summary>
         </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.HttpRequestData.ClientCertificates">
+            <summary>
+            Gets the certificate collection involved in authenticating the client against the server.
+            </summary>
+        </member>
         <member name="P:Microsoft.IdentityModel.Protocols.HttpRequestData.PropertyBag">
             <summary>
             Gets or sets an <see cref="T:System.Collections.Generic.IDictionary`2"/> that enables custom extensibility scenarios.

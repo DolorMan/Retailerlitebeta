@@ -154,7 +154,7 @@
             Allows clients to listen for cache updates originating from disk.
             </summary>
             <remarks>
-            This event does not fire when the application is built against Mone framework (e.g. Xamarin.Mac), but it does fire on .Net Core on all 3 operating systems.
+            This event does not fire when the application is built against Mono framework, but it does fire on .Net Core on all 3 operating systems.
             </remarks>
         </member>
         <member name="M:Microsoft.Identity.Client.Extensions.Msal.MsalCacheHelper.GetAccountIdentifiersNoLockAsync(Microsoft.Identity.Client.Extensions.Msal.StorageCreationProperties,Microsoft.Identity.Client.Extensions.Msal.TraceSourceLogger)">
@@ -198,7 +198,7 @@
             Registers a token cache to synchronize with the persistent storage.
             </summary>
             <param name="tokenCache">The application token cache, typically referenced as <see cref="P:Microsoft.Identity.Client.IClientApplicationBase.UserTokenCache"/></param>
-            <remarks>Call <see cref="M:Microsoft.Identity.Client.Extensions.Msal.MsalCacheHelper.UnregisterCache(Microsoft.Identity.Client.ITokenCache)"/> to have the given token cache stop syncronizing.</remarks>
+            <remarks>Call <see cref="M:Microsoft.Identity.Client.Extensions.Msal.MsalCacheHelper.UnregisterCache(Microsoft.Identity.Client.ITokenCache)"/> to have the given token cache stop synchronizing.</remarks>
         </member>
         <member name="M:Microsoft.Identity.Client.Extensions.Msal.MsalCacheHelper.UnregisterCache(Microsoft.Identity.Client.ITokenCache)">
             <summary>
@@ -383,7 +383,7 @@
         </member>
         <member name="M:Microsoft.Identity.Client.Extensions.Msal.Libsecret.secret_password_store_sync(System.IntPtr,System.String,System.String,System.String,System.IntPtr,System.IntPtr@,System.String,System.String,System.String,System.String,System.IntPtr)">
             <summary>
-            saves a secret in the secret stroe using the keyring
+            saves a secret in the secret store using the keyring
             </summary>
             <param name="schema">schema for saving secret</param>
             <param name="collection">collection where to save the secret</param>
@@ -631,7 +631,7 @@
         </member>
         <member name="M:Microsoft.Identity.Client.Extensions.Msal.StorageCreationPropertiesBuilder.CustomizeLockRetry(System.Int32,System.Int32)">
             <summary>
-            Augments this builder with a custom retry ammount and delay between retries in the cases where a lock is used.
+            Augments this builder with a custom retry amount and delay between retries in the cases where a lock is used.
             </summary>
             <param name="lockRetryDelay">Delay between retries in ms, must be 1 or more</param>
             <param name="lockRetryCount">Number of retries, must be 1 or more</param>

@@ -150,46 +150,46 @@
         <member name="T:Azure.Identity.AuthorizationCodeCredential">
             <summary>
             Authenticates by redeeming an authorization code previously obtained from Microsoft Entra ID. See
-            <seealso href="https://learn.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow" /> for more information
+            <seealso href="https://learn.microsoft.com/entra/identity-platform/v2-oauth2-auth-code-flow" /> for more information
             about the authorization code authentication flow.
             </summary>
         </member>
         <member name="M:Azure.Identity.AuthorizationCodeCredential.#ctor">
             <summary>
-            Protected constructor for mocking.
+            Protected constructor for <see href="https://aka.ms/azsdk/net/mocking">mocking</see>.
             </summary>
         </member>
         <member name="M:Azure.Identity.AuthorizationCodeCredential.#ctor(System.String,System.String,System.String,System.String)">
             <summary>
             Creates an instance of the ClientSecretCredential with the details needed to authenticate against Microsoft Entra ID with a prefetched authorization code.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientSecret">A client secret that was generated for the App Registration used to authenticate the client.</param>
             <param name="authorizationCode">The authorization code obtained from a call to authorize. The code should be obtained with all required scopes.
-            See https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow for more information.</param>
+            See https://learn.microsoft.com/entra/identity-platform/v2-oauth2-auth-code-flow for more information.</param>
         </member>
         <member name="M:Azure.Identity.AuthorizationCodeCredential.#ctor(System.String,System.String,System.String,System.String,Azure.Identity.AuthorizationCodeCredentialOptions)">
             <summary>
             Creates an instance of the ClientSecretCredential with the details needed to authenticate against Microsoft Entra ID with a prefetched authorization code.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientSecret">A client secret that was generated for the App Registration used to authenticate the client.</param>
             <param name="authorizationCode">The authorization code obtained from a call to authorize. The code should be obtained with all required scopes.
-            See https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow for more information.</param>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            See <see href="https://learn.microsoft.com/entra/identity-platform/v2-oauth2-auth-code-flow" /> for more information.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.AuthorizationCodeCredential.#ctor(System.String,System.String,System.String,System.String,Azure.Identity.TokenCredentialOptions)">
             <summary>
             Creates an instance of the ClientSecretCredential with the details needed to authenticate against Microsoft Entra ID with a prefetched authorization code.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientSecret">A client secret that was generated for the App Registration used to authenticate the client.</param>
             <param name="authorizationCode">The authorization code obtained from a call to authorize. The code should be obtained with all required scopes.
-            See https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-auth-code-flow for more information.</param>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            See <see href="https://learn.microsoft.com/entra/identity-platform/v2-oauth2-auth-code-flow" /> for more information.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.AuthorizationCodeCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
             <summary>
@@ -294,14 +294,14 @@
         </member>
         <member name="M:Azure.Identity.AzureCliCredential.#ctor">
             <summary>
-            Create an instance of CliCredential class.
+            Create an instance of <see cref="T:Azure.Identity.AzureCliCredential" /> class.
             </summary>
         </member>
         <member name="M:Azure.Identity.AzureCliCredential.#ctor(Azure.Identity.AzureCliCredentialOptions)">
             <summary>
-            Create an instance of CliCredential class.
+            Create an instance of <see cref="T:Azure.Identity.AzureCliCredential" /> class.
             </summary>
-            <param name="options"> The Azure Active Directory tenant (directory) Id of the service principal. </param>
+            <param name="options"> The Microsoft Entra tenant (directory) ID of the service principal. </param>
         </member>
         <member name="M:Azure.Identity.AzureCliCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
             <summary>
@@ -355,7 +355,7 @@
             <summary>
             Create an instance of the <see cref="T:Azure.Identity.AzureDeveloperCliCredential" /> class.
             </summary>
-            <param name="options"> The Azure Active Directory tenant (directory) Id of the service principal. </param>
+            <param name="options"> The Microsoft Entra tenant (directory) ID of the service principal. </param>
         </member>
         <member name="M:Azure.Identity.AzureDeveloperCliCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
             <summary>
@@ -393,6 +393,69 @@
         <member name="P:Azure.Identity.AzureDeveloperCliCredentialOptions.ProcessTimeout">
             <summary>
             The CLI process timeout.
+            </summary>
+        </member>
+        <member name="T:Azure.Identity.AzurePipelinesCredential">
+            <summary>
+            Credential which authenticates using an Azure Pipelines service connection.
+            </summary>
+        </member>
+        <member name="M:Azure.Identity.AzurePipelinesCredential.#ctor">
+            <summary>
+            Protected constructor for <see href="https://aka.ms/azsdk/net/mocking">mocking</see>.
+            </summary>
+        </member>
+        <member name="M:Azure.Identity.AzurePipelinesCredential.#ctor(System.String,System.String,System.String,System.String,Azure.Identity.AzurePipelinesCredentialOptions)">
+            <summary>
+            Creates a new instance of the <see cref="T:Azure.Identity.AzurePipelinesCredential" />.
+            </summary>
+            <param name="tenantId">The tenant ID for the service connection.</param>
+            <param name="clientId">The client ID for the service connection.</param>
+            <param name="serviceConnectionId">The service connection Id for the service connection associated with the pipeline.</param>
+            <param name="systemAccessToken">The pipeline's <see href="https://learn.microsoft.com/azure/devops/pipelines/build/variables?view=azure-devops%26tabs=yaml#systemaccesstoken">System.AccessToken</see> value.</param>
+            <param name="options">An instance of <see cref="T:Azure.Identity.AzurePipelinesCredentialOptions" />.</param>
+            <exception cref="T:System.ArgumentNullException">When <paramref name="systemAccessToken" /> is null.</exception>
+        </member>
+        <member name="M:Azure.Identity.AzurePipelinesCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
+            <summary>
+            Gets an <see cref="T:Azure.Core.AccessToken" /> for the specified set of scopes.
+            </summary><param name="requestContext">The <see cref="T:Azure.Core.TokenRequestContext" /> with authentication information.</param><param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to use.</param><returns>A valid <see cref="T:Azure.Core.AccessToken" />.</returns><remarks>Caching and management of the lifespan for the <see cref="T:Azure.Core.AccessToken" /> is considered the responsibility of the caller: each call should request a fresh token being requested.</remarks>
+        </member>
+        <member name="M:Azure.Identity.AzurePipelinesCredential.GetTokenAsync(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
+            <summary>
+            Gets an <see cref="T:Azure.Core.AccessToken" /> for the specified set of scopes.
+            </summary><param name="requestContext">The <see cref="T:Azure.Core.TokenRequestContext" /> with authentication information.</param><param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken" /> to use.</param><returns>A valid <see cref="T:Azure.Core.AccessToken" />.</returns><remarks>Caching and management of the lifespan for the <see cref="T:Azure.Core.AccessToken" /> is considered the responsibility of the caller: each call should request a fresh token being requested.</remarks>
+        </member>
+        <member name="T:Azure.Identity.AzurePipelinesCredentialOptions">
+            <summary>
+            Options used to configure the <see cref="T:Azure.Identity.AzurePipelinesCredential" />.
+            </summary>
+        </member>
+        <member name="P:Azure.Identity.AzurePipelinesCredentialOptions.OidcRequestUri">
+            <summary>
+            The URI of the OIDC request endpoint.
+            </summary>
+        </member>
+        <member name="P:Azure.Identity.AzurePipelinesCredentialOptions.AdditionallyAllowedTenants">
+            <summary>
+            Specifies tenants in addition to the configured tenant for which the credential may acquire tokens.
+            Add the wildcard value "*" to allow the credential to acquire tokens for any tenant the logged in account can access.
+            If no specific tenant was configured this option will have no effect, and the credential will acquire tokens for any requested tenant.
+            </summary>
+        </member>
+        <member name="P:Azure.Identity.AzurePipelinesCredentialOptions.DisableInstanceDiscovery">
+            <summary>
+            Gets or sets the setting which determines whether or not instance discovery is performed when attempting to authenticate.
+            Setting this to true will completely disable both instance discovery and authority validation.
+            This functionality is intended for use in scenarios where the metadata endpoint cannot be reached, such as in private clouds or Azure Stack.
+            The process of instance discovery entails retrieving authority metadata from https://login.microsoft.com/ to validate the authority.
+            By setting this to <c>true</c>, the validation of the authority is disabled.
+            As a result, it is crucial to ensure that the configured authority host is valid and trustworthy."
+            </summary>
+        </member>
+        <member name="P:Azure.Identity.AzurePipelinesCredentialOptions.TokenCachePersistenceOptions">
+            <summary>
+            Specifies the <see cref="P:Azure.Identity.ISupportsTokenCachePersistenceOptions.TokenCachePersistenceOptions" /> to be used by the credential. If no options are specified, the token cache will not be persisted to disk.
             </summary>
         </member>
         <member name="T:Azure.Identity.AzurePowerShellCredential">
@@ -495,7 +558,7 @@
         </member>
         <member name="M:Azure.Identity.ChainedTokenCredential.#ctor">
             <summary>
-            Constructor for instrumenting in tests
+            Protected constructor for <see href="https://aka.ms/azsdk/net/mocking">mocking</see>.
             </summary>
         </member>
         <member name="M:Azure.Identity.ChainedTokenCredential.#ctor(Azure.Core.TokenCredential[])">
@@ -531,26 +594,26 @@
         </member>
         <member name="M:Azure.Identity.ClientAssertionCredential.#ctor">
             <summary>
-            Protected constructor for mocking.
+            Protected constructor for <see href="https://aka.ms/azsdk/net/mocking">mocking</see>.
             </summary>
         </member>
         <member name="M:Azure.Identity.ClientAssertionCredential.#ctor(System.String,System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{System.String}},Azure.Identity.ClientAssertionCredentialOptions)">
             <summary>
             Creates an instance of the ClientCertificateCredential with an asynchronous callback that provides a signed client assertion to authenticate against Microsoft Entra ID.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="assertionCallback">An asynchronous callback returning a valid client assertion used to authenticate the service principal.</param>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.ClientAssertionCredential.#ctor(System.String,System.String,System.Func{System.String},Azure.Identity.ClientAssertionCredentialOptions)">
             <summary>
             Creates an instance of the ClientCertificateCredential with a synchronous callback that provides a signed client assertion to authenticate against Microsoft Entra ID.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="assertionCallback">A synchronous callback returning a valid client assertion used to authenticate the service principal.</param>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.ClientAssertionCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
             <summary>
@@ -588,11 +651,16 @@
             As a result, it is crucial to ensure that the configured authority host is valid and trustworthy."
             </summary>
         </member>
+        <member name="P:Azure.Identity.ClientAssertionCredentialOptions.TokenCachePersistenceOptions">
+            <summary>
+            Specifies the <see cref="P:Azure.Identity.ISupportsTokenCachePersistenceOptions.TokenCachePersistenceOptions" /> to be used by the credential. If no options are specified, the token cache will not be persisted to disk.
+            </summary>
+        </member>
         <member name="T:Azure.Identity.ClientCertificateCredential">
             <summary>
-            Enables authentication of a service principal to Microsoft Entra ID using a X509 certificate that is assigned to it's App Registration. More information
-            on how to configure certificate authentication can be found here:
-            https://learn.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials#register-your-certificate-with-azure-ad
+            Enables authentication of a service principal to Microsoft Entra ID using a X509 certificate that is assigned to its App Registration. More information
+            on how to configure certificate authentication can be found at
+            <see href="https://learn.microsoft.com/entra/identity-platform/certificate-credentials#register-your-certificate-with-microsoft-identity-platform" />.
             </summary>
         </member>
         <member name="P:Azure.Identity.ClientCertificateCredential.TenantId">
@@ -607,14 +675,14 @@
         </member>
         <member name="M:Azure.Identity.ClientCertificateCredential.#ctor">
             <summary>
-            Protected constructor for mocking.
+            Protected constructor for <see href="https://aka.ms/azsdk/net/mocking">mocking</see>.
             </summary>
         </member>
         <member name="M:Azure.Identity.ClientCertificateCredential.#ctor(System.String,System.String,System.String)">
             <summary>
             Creates an instance of the ClientCertificateCredential with the details needed to authenticate against Microsoft Entra ID with the specified certificate.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientCertificatePath">The path to a file which contains both the client certificate and private key.</param>
         </member>
@@ -622,25 +690,25 @@
             <summary>
             Creates an instance of the ClientCertificateCredential with the details needed to authenticate against Microsoft Entra ID with the specified certificate.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientCertificatePath">The path to a file which contains both the client certificate and private key.</param>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.ClientCertificateCredential.#ctor(System.String,System.String,System.String,Azure.Identity.ClientCertificateCredentialOptions)">
             <summary>
             Creates an instance of the ClientCertificateCredential with the details needed to authenticate against Microsoft Entra ID with the specified certificate.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientCertificatePath">The path to a file which contains both the client certificate and private key.</param>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.ClientCertificateCredential.#ctor(System.String,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)">
             <summary>
             Creates an instance of the ClientCertificateCredential with the details needed to authenticate against Microsoft Entra ID with the specified certificate.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientCertificate">The authentication X509 Certificate of the service principal</param>
         </member>
@@ -648,19 +716,19 @@
             <summary>
             Creates an instance of the ClientCertificateCredential with the details needed to authenticate against Microsoft Entra ID with the specified certificate.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientCertificate">The authentication X509 Certificate of the service principal</param>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.ClientCertificateCredential.#ctor(System.String,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2,Azure.Identity.ClientCertificateCredentialOptions)">
             <summary>
             Creates an instance of the ClientCertificateCredential with the details needed to authenticate against Microsoft Entra ID with the specified certificate.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientCertificate">The authentication X509 Certificate of the service principal</param>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.ClientCertificateCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
             <summary>
@@ -715,8 +783,8 @@
         <member name="T:Azure.Identity.ClientSecretCredential">
             <summary>
             Enables authentication to Microsoft Entra ID using a client secret that was generated for an App Registration. More information on how
-            to configure a client secret can be found here:
-            https://docs.microsoft.com/azure/active-directory/develop/quickstart-configure-app-access-web-apis#add-credentials-to-your-web-application
+            to configure a client secret can be found at
+            <see href="https://learn.microsoft.com/entra/identity-platform/quickstart-configure-app-access-web-apis#add-credentials-to-your-web-application" />.
             </summary>
         </member>
         <member name="P:Azure.Identity.ClientSecretCredential.TenantId">
@@ -736,14 +804,14 @@
         </member>
         <member name="M:Azure.Identity.ClientSecretCredential.#ctor">
             <summary>
-            Protected constructor for mocking.
+            Protected constructor for <see href="https://aka.ms/azsdk/net/mocking">mocking</see>.
             </summary>
         </member>
         <member name="M:Azure.Identity.ClientSecretCredential.#ctor(System.String,System.String,System.String)">
             <summary>
             Creates an instance of the ClientSecretCredential with the details needed to authenticate against Microsoft Entra ID with a client secret.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientSecret">A client secret that was generated for the App Registration used to authenticate the client.</param>
         </member>
@@ -751,19 +819,19 @@
             <summary>
             Creates an instance of the ClientSecretCredential with the details needed to authenticate against Microsoft Entra ID with a client secret.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientSecret">A client secret that was generated for the App Registration used to authenticate the client.</param>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to the Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.ClientSecretCredential.#ctor(System.String,System.String,System.String,Azure.Identity.TokenCredentialOptions)">
             <summary>
             Creates an instance of the ClientSecretCredential with the details needed to authenticate against Microsoft Entra ID with a client secret.
             </summary>
-            <param name="tenantId">The Azure Active Directory tenant (directory) Id of the service principal.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientSecret">A client secret that was generated for the App Registration used to authenticate the client.</param>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.ClientSecretCredential.GetTokenAsync(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
             <summary>
@@ -808,8 +876,8 @@
         </member>
         <member name="T:Azure.Identity.DefaultAzureCredential">
              <summary>
-             Provides a default <see cref="T:Azure.Core.TokenCredential" /> authentication flow for applications that will be deployed to Azure.  The following credential
-             types if enabled will be tried, in order:
+             Provides a default <see cref="T:Azure.Core.TokenCredential" /> authentication flow for applications that will be deployed to Azure. The following credential
+             types, if enabled, will be tried, in order:
              <list type="bullet">
              <item><description><see cref="T:Azure.Identity.EnvironmentCredential" /></description></item>
              <item><description><see cref="T:Azure.Identity.WorkloadIdentityCredential" /></description></item>
@@ -832,17 +900,28 @@
              <example>
              <para>
              This example demonstrates authenticating the BlobClient from the Azure.Storage.Blobs client library using the DefaultAzureCredential,
-             deployed to an Azure resource with a user assigned managed identity configured.
+             deployed to an Azure resource with a user-assigned managed identity configured.
              </para>
-             <code snippet="Snippet:UserAssignedManagedIdentity" language="csharp">
-             // When deployed to an azure host, the default azure credential will authenticate the specified user assigned managed identity.
+             <code snippet="Snippet:UserAssignedManagedIdentityWithClientId" language="csharp">
+             // When deployed to an Azure host, DefaultAzureCredential will authenticate the specified user-assigned managed identity.
             
-             string userAssignedClientId = "&lt;your managed identity client Id&gt;";
-             var credential = new DefaultAzureCredential(new DefaultAzureCredentialOptions { ManagedIdentityClientId = userAssignedClientId });
+             string userAssignedClientId = "&lt;your managed identity client ID&gt;";
+             var credential = new DefaultAzureCredential(
+                 new DefaultAzureCredentialOptions
+                 {
+                     ManagedIdentityClientId = userAssignedClientId
+                 });
             
-             var blobClient = new BlobClient(new Uri("https://myaccount.blob.core.windows.net/mycontainer/myblob"), credential);
+             var blobClient = new BlobClient(
+                 new Uri("https://myaccount.blob.core.windows.net/mycontainer/myblob"),
+                 credential);
              </code>
              </example>
+        </member>
+        <member name="M:Azure.Identity.DefaultAzureCredential.#ctor">
+            <summary>
+            Protected constructor for <see href="https://aka.ms/azsdk/net/mocking">mocking</see>.
+            </summary>
         </member>
         <member name="M:Azure.Identity.DefaultAzureCredential.#ctor(System.Boolean)">
             <summary>
@@ -854,7 +933,7 @@
             <summary>
             Creates an instance of the <see cref="T:Azure.Identity.DefaultAzureCredential" /> class.
             </summary>
-            <param name="options">Options that configure the management of the requests sent to Azure Active Directory services, and determine which credentials are included in the <see cref="T:Azure.Identity.DefaultAzureCredential" /> authentication flow.</param>
+            <param name="options">Options that configure the management of the requests sent to Microsoft Entra ID, and determine which credentials are included in the <see cref="T:Azure.Identity.DefaultAzureCredential" /> authentication flow.</param>
         </member>
         <member name="M:Azure.Identity.DefaultAzureCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
             <summary>
@@ -957,17 +1036,23 @@
         </member>
         <member name="P:Azure.Identity.DefaultAzureCredentialOptions.ManagedIdentityClientId">
             <summary>
-            Specifies the client id of a user assigned ManagedIdentity. If this value is configured, then <see cref="P:Azure.Identity.DefaultAzureCredentialOptions.ManagedIdentityResourceId" /> should not be configured.
+            Specifies the client ID of a user-assigned managed identity. If this value is configured, then <see cref="P:Azure.Identity.DefaultAzureCredentialOptions.ManagedIdentityResourceId" /> should not be configured.
             </summary>
+            <remarks>
+            If neither the <see cref="P:Azure.Identity.DefaultAzureCredentialOptions.ManagedIdentityClientId" /> nor the <see cref="P:Azure.Identity.DefaultAzureCredentialOptions.ManagedIdentityResourceId" /> property is set, then a system-assigned managed identity is used.
+            </remarks>
         </member>
         <member name="P:Azure.Identity.DefaultAzureCredentialOptions.ManagedIdentityResourceId">
             <summary>
-            Specifies the resource id of a user assigned ManagedIdentity. If this value is configured, then <see cref="P:Azure.Identity.DefaultAzureCredentialOptions.ManagedIdentityClientId" /> should not be configured.
+            Specifies the resource ID of a user-assigned managed identity. If this value is configured, then <see cref="P:Azure.Identity.DefaultAzureCredentialOptions.ManagedIdentityClientId" /> should not be configured.
             </summary>
+            <remarks>
+            If neither the <see cref="P:Azure.Identity.DefaultAzureCredentialOptions.ManagedIdentityClientId" /> nor the <see cref="P:Azure.Identity.DefaultAzureCredentialOptions.ManagedIdentityResourceId" /> property is set, then a system-assigned managed identity is used.
+            </remarks>
         </member>
         <member name="P:Azure.Identity.DefaultAzureCredentialOptions.CredentialProcessTimeout">
             <summary>
-            Specifies timeout for credentials invoked via sub-process. e.g. Visual Studio, Azure CLI, Azure Powershell.
+            Specifies timeout for credentials invoked via sub-process. e.g. Visual Studio, Azure CLI, Azure PowerShell.
             </summary>
         </member>
         <member name="P:Azure.Identity.DefaultAzureCredentialOptions.ExcludeEnvironmentCredential">
@@ -1219,14 +1304,14 @@
             Creates an instance of the EnvironmentCredential class and reads client secret details from environment variables.
             If the expected environment variables are not found at this time, the GetToken method will return the default <see cref="T:Azure.Core.AccessToken" /> when invoked.
             </summary>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.EnvironmentCredential.#ctor(Azure.Identity.EnvironmentCredentialOptions)">
             <summary>
             Creates an instance of the EnvironmentCredential class and reads client secret details from environment variables.
             If the expected environment variables are not found at this time, the GetToken method will return the default <see cref="T:Azure.Core.AccessToken" /> when invoked.
             </summary>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.EnvironmentCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
             <summary>
@@ -1299,6 +1384,16 @@
         <member name="P:Azure.Identity.EnvironmentCredentialOptions.Password">
             <summary>
             The password of used to authenticate the user. This value defaults to the value of the environment variable AZURE_PASSWORD.
+            </summary>
+        </member>
+        <member name="P:Azure.Identity.EnvironmentCredentialOptions.MsalConfidentialClient">
+            <summary>
+            MSAL client to be used for testing.
+            </summary>
+        </member>
+        <member name="P:Azure.Identity.EnvironmentCredentialOptions.MsalPublicClient">
+            <summary>
+            MSAL client to be used for testing.
             </summary>
         </member>
         <member name="P:Azure.Identity.EnvironmentCredentialOptions.DisableInstanceDiscovery">
@@ -1482,37 +1577,41 @@
             As a result, it is crucial to ensure that the configured authority host is valid and trustworthy."
             </summary>
         </member>
+        <member name="P:Azure.Identity.ISupportsTokenCachePersistenceOptions.TokenCachePersistenceOptions">
+            <summary>
+            Specifies the <see cref="P:Azure.Identity.ISupportsTokenCachePersistenceOptions.TokenCachePersistenceOptions" /> to be used by the credential. If no options are specified, the token cache will not be persisted to disk.
+            </summary>
+        </member>
         <member name="T:Azure.Identity.ManagedIdentityCredential">
             <summary>
-            Attempts authentication using a managed identity that has been assigned to the deployment environment. This authentication type works for all Azure hosted
-            environments that support managed identity. More information about configuring managed identities can be found here:
-            https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview
+            Attempts authentication using a managed identity that has been assigned to the deployment environment. This authentication type works for all Azure-hosted
+            environments that support managed identity. More information about configuring managed identities can be found at
+            <see href="https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview" />.
             </summary>
         </member>
         <member name="M:Azure.Identity.ManagedIdentityCredential.#ctor">
             <summary>
-            Protected constructor for mocking.
+            Protected constructor for <see href="https://aka.ms/azsdk/net/mocking">mocking</see>.
             </summary>
         </member>
         <member name="M:Azure.Identity.ManagedIdentityCredential.#ctor(System.String,Azure.Identity.TokenCredentialOptions)">
             <summary>
-            Creates an instance of the ManagedIdentityCredential capable of authenticating a resource with a managed identity.
+            Creates an instance of <see cref="T:Azure.Identity.ManagedIdentityCredential" /> capable of authenticating a resource with a user-assigned or a system-assigned managed identity.
             </summary>
             <param name="clientId">
-            The client id to authenticate for a user assigned managed identity.  More information on user assigned managed identities can be found here:
-            https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview#how-a-user-assigned-managed-identity-works-with-an-azure-vm
+            The client ID to authenticate for a <see href="https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview#how-a-user-assigned-managed-identity-works-with-an-azure-vm">user-assigned managed identity</see>.
+            If not provided, a system-assigned managed identity is used.
             </param>
-            <param name="options">Options to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.ManagedIdentityCredential.#ctor(Azure.Core.ResourceIdentifier,Azure.Identity.TokenCredentialOptions)">
             <summary>
-            Creates an instance of the ManagedIdentityCredential capable of authenticating a resource with a managed identity.
+            Creates an instance of <see cref="T:Azure.Identity.ManagedIdentityCredential" /> capable of authenticating a resource with a user-assigned managed identity.
             </summary>
             <param name="resourceId">
-            The resource id to authenticate for a user assigned managed identity.  More information on user assigned managed identities can be found here:
-            https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview#how-a-user-assigned-managed-identity-works-with-an-azure-vm
+            The resource ID to authenticate for a <see href="https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview#how-a-user-assigned-managed-identity-works-with-an-azure-vm">user-assigned managed identity</see>.
             </param>
-            <param name="options">Options to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.ManagedIdentityCredential.GetTokenAsync(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
             <summary>
@@ -1541,7 +1640,7 @@
         </member>
         <member name="M:Azure.Identity.OnBehalfOfCredential.#ctor">
             <summary>
-            Protected constructor for mocking.
+            Protected constructor for <see href="https://aka.ms/azsdk/net/mocking">mocking</see>.
             </summary>
         </member>
         <member name="M:Azure.Identity.OnBehalfOfCredential.#ctor(System.String,System.String,System.Security.Cryptography.X509Certificates.X509Certificate2,System.String)">
@@ -1579,6 +1678,26 @@
             <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
             <param name="clientId">The client (application) ID of the service principal</param>
             <param name="clientSecret">A client secret that was generated for the App Registration used to authenticate the client.</param>
+            <param name="userAssertion">The access token that will be used by <see cref="T:Azure.Identity.OnBehalfOfCredential" /> as the user assertion when requesting On-Behalf-Of tokens.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
+        </member>
+        <member name="M:Azure.Identity.OnBehalfOfCredential.#ctor(System.String,System.String,System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{System.String}},System.String,Azure.Identity.OnBehalfOfCredentialOptions)">
+            <summary>
+            Creates an instance of the <see cref="T:Azure.Identity.OnBehalfOfCredential" /> with the details needed to authenticate against Microsoft Entra ID with the specified client assertion.
+            </summary>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
+            <param name="clientId">The client (application) ID of the service principal</param>
+            <param name="clientAssertionCallback">An asynchronous callback returning a valid client assertion used to authenticate the service principal.</param>
+            <param name="userAssertion">The access token that will be used by <see cref="T:Azure.Identity.OnBehalfOfCredential" /> as the user assertion when requesting On-Behalf-Of tokens.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
+        </member>
+        <member name="M:Azure.Identity.OnBehalfOfCredential.#ctor(System.String,System.String,System.Func{System.String},System.String,Azure.Identity.OnBehalfOfCredentialOptions)">
+            <summary>
+            Creates an instance of the <see cref="T:Azure.Identity.OnBehalfOfCredential" /> with the details needed to authenticate against Microsoft Entra ID with the specified client assertion.
+            </summary>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID of the service principal.</param>
+            <param name="clientId">The client (application) ID of the service principal</param>
+            <param name="clientAssertionCallback">A synchronous callback returning a valid client assertion used to authenticate the service principal.</param>
             <param name="userAssertion">The access token that will be used by <see cref="T:Azure.Identity.OnBehalfOfCredential" /> as the user assertion when requesting On-Behalf-Of tokens.</param>
             <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
@@ -1788,7 +1907,7 @@
             </summary>
             <param name="username">The user account's username, also known as UPN.</param>
             <param name="password">The user account's password.</param>
-            <param name="tenantId">The Azure Active Directory tenant (directory) ID or name.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID or name.</param>
             <param name="clientId">The client (application) ID of an App Registration in the tenant.</param>
         </member>
         <member name="M:Azure.Identity.UsernamePasswordCredential.#ctor(System.String,System.String,System.String,System.String,Azure.Identity.TokenCredentialOptions)">
@@ -1798,7 +1917,7 @@
             </summary>
             <param name="username">The user account's user name, UPN.</param>
             <param name="password">The user account's password.</param>
-            <param name="tenantId">The Azure Active Directory tenant (directory) ID or name.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID or name.</param>
             <param name="clientId">The client (application) ID of an App Registration in the tenant.</param>
             <param name="options">The client options for the newly created UsernamePasswordCredential</param>
         </member>
@@ -1809,7 +1928,7 @@
             </summary>
             <param name="username">The user account's user name, UPN.</param>
             <param name="password">The user account's password.</param>
-            <param name="tenantId">The Azure Active Directory tenant (directory) ID or name.</param>
+            <param name="tenantId">The Microsoft Entra tenant (directory) ID or name.</param>
             <param name="clientId">The client (application) ID of an App Registration in the tenant.</param>
             <param name="options">The client options for the newly created UsernamePasswordCredential</param>
         </member>
@@ -2005,7 +2124,7 @@
             <summary>
             Creates a new instance of the <see cref="T:Azure.Identity.WorkloadIdentityCredential" /> with the specified options.
             </summary>
-            <param name="options">Options that allow to configure the management of the requests sent to the Azure Active Directory service.</param>
+            <param name="options">Options that allow to configure the management of the requests sent to Microsoft Entra ID.</param>
         </member>
         <member name="M:Azure.Identity.WorkloadIdentityCredential.GetToken(Azure.Core.TokenRequestContext,System.Threading.CancellationToken)">
             <summary>
@@ -2736,6 +2855,26 @@
             from the https://docs.microsoft.com/azure/azure-resource-manager/management/azure-services-resource-providers list.
             </summary>
         </member>
+        <member name="M:Azure.Core.Base64Url.Decode(System.String)">
+            <summary> Converts a Base64URL encoded string to a string.</summary>
+            <param name="encoded">The Base64Url encoded string containing UTF8 bytes for a string.</param>
+            <returns>The string represented by the Base64URL encoded string.</returns>
+        </member>
+        <member name="M:Azure.Core.Base64Url.Encode(System.Byte[])">
+            <summary>Encode a byte array as a Base64URL encoded string.</summary>
+            <param name="bytes">Raw byte input buffer.</param>
+            <returns>The bytes, encoded as a Base64URL string.</returns>
+        </member>
+        <member name="M:Azure.Core.Base64Url.DecodeString(System.String)">
+            <summary> Converts a Base64URL encoded string to a string.</summary>
+            <param name="encoded">The Base64Url encoded string containing UTF8 bytes for a string.</param>
+            <returns>The string represented by the Base64URL encoded string.</returns>
+        </member>
+        <member name="M:Azure.Core.Base64Url.EncodeString(System.String)">
+            <summary>Encode a string as a Base64URL encoded string.</summary>
+            <param name="value">String input buffer.</param>
+            <returns>The UTF8 bytes for the string, encoded as a Base64URL string.</returns>
+        </member>
         <member name="M:Azure.Core.Pipeline.ClientDiagnostics.#ctor(Azure.Core.ClientOptions,System.Nullable{System.Boolean})">
             <summary>
             Initializes a new instance of the <see cref="T:Azure.Core.Pipeline.ClientDiagnostics" /> class.
@@ -2762,7 +2901,7 @@
              The default value could change in the future, the flag should be only set to false if suppression for the client
              should never be enabled.</param>
         </member>
-        <member name="M:Azure.Core.Pipeline.DiagnosticScope.AddLink(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+        <member name="M:Azure.Core.Pipeline.DiagnosticScope.AddLink(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
             <summary>
             Adds a link to the scope. This must be called before <see cref="M:Azure.Core.Pipeline.DiagnosticScope.Start" /> has been called for the DiagnosticScope.
             </summary>
@@ -2783,10 +2922,26 @@
             </summary>
             <param name="exception">The exception to associate with the failed scope.</param>
         </member>
+        <member name="M:Azure.Core.Pipeline.DiagnosticScope.Failed(System.String)">
+            <summary>
+            Marks the scope as failed with low-cardinality error.type attribute.
+            </summary>
+            <param name="errorCode">Error code to associate with the failed scope.</param>
+        </member>
         <member name="T:Azure.Core.Pipeline.ActivityExtensions">
             <summary>
             Until Activity Source is no longer considered experimental.
             </summary>
+        </member>
+        <member name="M:Azure.Core.Pipeline.DiagnosticScopeFactory.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Creates diagnostic scope factory.
+            </summary>
+            <param name="clientNamespace">The namespace which is used as a prefix for all ActivitySources created by the factory and the name of DiagnosticSource (when used).</param>
+            <param name="resourceProviderNamespace">Azure resource provider namespace.</param>
+            <param name="isActivityEnabled">Flag indicating if distributed tracing is enabled.</param>
+            <param name="suppressNestedClientActivities">Flag indicating if nested Azure SDK activities describing public API calls should be suppressed.</param>
+            <param name="isStable">Whether instrumentation is considered stable. When false, experimental feature flag controls if tracing is enabled.</param>
         </member>
         <member name="T:Azure.Core.Pipeline.TaskExtensions.Enumerable`1">
             <summary>
@@ -2795,26 +2950,6 @@
             Please don't delete this method and don't make these types private.
             </summary>
             <typeparam name="T"></typeparam>
-        </member>
-        <member name="M:Azure.Core.Base64Url.Decode(System.String)">
-            <summary> Converts a Base64URL encoded string to a string.</summary>
-            <param name="encoded">The Base64Url encoded string containing UTF8 bytes for a string.</param>
-            <returns>The string represented by the Base64URL encoded string.</returns>
-        </member>
-        <member name="M:Azure.Core.Base64Url.Encode(System.Byte[])">
-            <summary>Encode a byte array as a Base64URL encoded string.</summary>
-            <param name="bytes">Raw byte input buffer.</param>
-            <returns>The bytes, encoded as a Base64URL string.</returns>
-        </member>
-        <member name="M:Azure.Core.Base64Url.DecodeString(System.String)">
-            <summary> Converts a Base64URL encoded string to a string.</summary>
-            <param name="encoded">The Base64Url encoded string containing UTF8 bytes for a string.</param>
-            <returns>The string represented by the Base64URL encoded string.</returns>
-        </member>
-        <member name="M:Azure.Core.Base64Url.EncodeString(System.String)">
-            <summary>Encode a string as a Base64URL encoded string.</summary>
-            <param name="value">String input buffer.</param>
-            <returns>The UTF8 bytes for the string, encoded as a Base64URL string.</returns>
         </member>
         <member name="T:Azure.Core.LightweightPkcs8Decoder">
              <summary>

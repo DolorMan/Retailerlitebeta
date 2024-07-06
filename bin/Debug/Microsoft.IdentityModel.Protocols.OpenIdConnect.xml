@@ -58,6 +58,31 @@
             Gets or sets the 'authorization_endpoint'.
             </summary>
         </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.AuthorizationResponseIssParameterSupported">
+            <summary>
+            Gets or sets the 'authorization_response_iss_parameter_supported'
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelAuthenticationEndpoint">
+            <summary>
+            Gets or sets the 'backchannel_authentication_endpoint'.
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelAuthenticationRequestSigningAlgValuesSupported">
+            <summary>
+            Gets the collection of 'backchannel_authentication_request_signing_alg_values_supported'
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelTokenDeliveryModesSupported">
+            <summary>
+            Gets the collection of 'backchannel_token_delivery_modes_supported'
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.BackchannelUserCodeParameterSupported">
+            <summary>
+            Gets or sets the 'backchannel_user_code_parameter_supported'
+            </summary>
+        </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.CheckSessionIframe">
             <summary>
             Gets or sets the 'check_session_iframe'.
@@ -88,6 +113,11 @@
             Gets the collection of 'display_values_supported'
             </summary>
         </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.DPoPSigningAlgValuesSupported">
+            <summary>
+            Gets the collection of 'dpop_signing_alg_values_supported'
+            </summary>
+        </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.EndSessionEndpoint">
             <summary>
             Gets or sets the 'end_session_endpoint'.
@@ -97,11 +127,19 @@
             <summary>
             Gets or sets the 'frontchannel_logout_session_supported'.
             </summary>
+            <remarks>Would be breaking to change, in 6x it was string, spec says bool.
+            TODO - add another property, obsolete and drop in 8x?
+            see: https://openid.net/specs/openid-connect-frontchannel-1_0.html
+            </remarks>
         </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.FrontchannelLogoutSupported">
             <summary>
             Gets or sets the 'frontchannel_logout_supported'.
             </summary>
+            <remarks>Would be breaking to change, in 6x it was string, spec says bool.
+            TODO - add another property, obsolete and drop in 8x?
+            see: https://openid.net/specs/openid-connect-frontchannel-1_0.html
+            </remarks>
         </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.GrantTypesSupported">
             <summary>
@@ -173,6 +211,16 @@
             Gets or sets the 'op_tos_uri'
             </summary>
         </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.PromptValuesSupported">
+            <summary>
+            Gets the collection of 'prompt_values_supported'
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.PushedAuthorizationRequestEndpoint">
+            <summary>
+            Gets or sets the 'pushed_authorization_request_endpoint'.
+            </summary>
+        </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RegistrationEndpoint">
             <summary>
             Gets or sets the 'registration_endpoint'
@@ -201,6 +249,11 @@
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequestUriParameterSupported">
             <summary>
             Gets or sets the 'request_uri_parameter_supported'
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequirePushedAuthorizationRequests">
+            <summary>
+            Gets or sets the 'require_pushed_authorization_requests'
             </summary>
         </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.RequireRequestUriRegistration">
@@ -245,7 +298,7 @@
         </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ActiveTokenEndpoint">
             <summary>
-            This base class property is not used in OpenIdConnect. 
+            This base class property is not used in OpenIdConnect.
             </summary>
         </member>
         <member name="P:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.TokenEndpointAuthMethodsSupported">
@@ -290,6 +343,20 @@
             </summary>
             <return>true if 'acr_values_supported' (AcrValuesSupported) is not empty; otherwise, false.</return>
         </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeBackchannelTokenDeliveryModesSupported">
+            <summary>
+            Gets a bool that determines if the 'backchannel_token_delivery_modes_supported' (BackchannelTokenDeliveryModesSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+            <return>true if 'backchannel_token_delivery_modes_supported' (BackchannelTokenDeliveryModesSupported) is not empty; otherwise, false.</return>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeBackchannelAuthenticationRequestSigningAlgValuesSupported">
+            <summary>
+            Gets a bool that determines if the 'backchannel_authentication_request_signing_alg_values_supported' (BackchannelAuthenticationRequestSigningAlgValuesSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+            <return>true if 'backchannel_authentication_request_signing_alg_values_supported' (BackchannelAuthenticationRequestSigningAlgValuesSupported) is not empty; otherwise, false.</return>
+        </member>
         <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeClaimsSupported">
             <summary>
             Gets a bool that determines if the 'claims_supported' (ClaimsSupported) property should be serialized.
@@ -317,6 +384,13 @@
             This is used by Json.NET in order to conditionally serialize properties.
             </summary>
             <return>true if 'display_values_supported' (DisplayValuesSupported) is not empty; otherwise, false.</return>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeDPoPSigningAlgValuesSupported">
+            <summary>
+            Gets a bool that determines if the 'dpop_signing_alg_values_supported' (DPoPSigningAlgValuesSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+            <return>true if 'dpop_signing_alg_values_supported' (DPoPSigningAlgValuesSupported) is not empty; otherwise, false.</return>
         </member>
         <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeGrantTypesSupported">
             <summary>
@@ -359,6 +433,13 @@
             This is used by Json.NET in order to conditionally serialize properties.
             </summary>
             <return>true if 'introspection_endpoint_auth_signing_alg_values_supported' (IntrospectionEndpointAuthSigningAlgValuesSupported) is not empty; otherwise, false.</return>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializePromptValuesSupported">
+            <summary>
+            Gets a bool that determines if the 'prompt_values_supported' (PromptValuesSupported) property should be serialized.
+            This is used by Json.NET in order to conditionally serialize properties.
+            </summary>
+            <return>true if 'prompt_values_supported' (PromptValuesSupported) is not empty; otherwise, false.</return>
         </member>
         <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration.ShouldSerializeRequestObjectEncryptionAlgValuesSupported">
             <summary>
@@ -661,6 +742,14 @@
             <param name="info">the <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data.</param>
             <param name="context">The contextual information about the source or destination.</param>
         </member>
+        <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfigurationSerializer.Read(System.Text.Json.Utf8JsonReader@,Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration)">
+            <summary>
+            Reads config. see: https://openid.net/specs/openid-connect-discovery-1_0.html
+            </summary>
+            <param name="reader">a <see cref="T:System.Text.Json.Utf8JsonReader"/> pointing at a StartObject.</param>
+            <param name="config"></param>
+            <returns>A <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfiguration"/>.</returns>
+        </member>
         <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.LogMessages">
             <summary>
             Log messages and codes
@@ -703,13 +792,7 @@
             <summary>
             Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage"/> class.
             </summary>
-            <param name="parameters">Enumeration of key value pairs.</param>        
-        </member>
-        <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage.#ctor(System.Object)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage"/> class.
-            </summary>
-            <param name="json">The JSON object from which the instance is created.</param>
+            <param name="parameters">Enumeration of key value pairs.</param>
         </member>
         <member name="M:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectMessage.Clone">
             <summary>
@@ -969,7 +1052,13 @@
         </member>
         <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectParameterNames">
             <summary>
-            Parameter names for OpenIdConnect.
+            Parameter names for OpenIdConnect Request/Response messages.
+            </summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectParameterUtf8Bytes">
+            <summary>
+            Parameter names for OpenIdConnect Request/Response messages as UTF8 bytes.
+            Used by UTF8JsonReader/Writer for performance gains.
             </summary>
         </member>
         <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectPrompt">
@@ -1408,8 +1497,15 @@
         </member>
         <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataNames">
             <summary>
-            OpenIdProviderConfiguration Names
+            OpenId Provider Metadata parameter names
             http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata 
+            </summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdProviderMetadataUtf8Bytes">
+            <summary>
+            OpenId Provider Metadata parameter names as UTF8Bytes
+            Used by UTF8JsonReader/Writer for performance gains.
+            http://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata
             </summary>
         </member>
     </members>

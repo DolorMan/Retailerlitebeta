@@ -11,6 +11,8 @@ using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Drawing.Printing;
 using System.Windows.Forms.VisualStyles;
+using System.IO;
+using System.Security.Policy;
 
 namespace Retailerlitebeta
 {
@@ -40,7 +42,8 @@ namespace Retailerlitebeta
             List<string> items = new List<string>();
 
             // Connection string to your SQL database
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\Retailerlitebeta\\Retailerlitebeta.mdf;Integrated Security=True;Connect Timeout=30;";
+            string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Path.Combine(appDirectory, "Retailerlitebeta.mdf")};Integrated Security=True";
             string query = "SELECT Name FROM productsAll";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -115,7 +118,8 @@ namespace Retailerlitebeta
         private int ind = 1;
         private void AddComboBoxValueToDataGridView()
         {
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\Retailerlitebeta\\Retailerlitebeta.mdf;Integrated Security=True;Connect Timeout=30;";
+            string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Path.Combine(appDirectory, "Retailerlitebeta.mdf")};Integrated Security=True";
             string selectedItem = comboBox1.SelectedItem?.ToString();
             if (!string.IsNullOrEmpty(selectedItem))
             {
@@ -177,7 +181,8 @@ namespace Retailerlitebeta
         private object[] GetSelectedRowData(string selectedItem)
         {
             // Connection string to your SQL database
-            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=F:\\Retailerlitebeta\\Retailerlitebeta.mdf;Integrated Security=True;Connect Timeout=30;";
+            string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={Path.Combine(appDirectory, "Retailerlitebeta.mdf")};Integrated Security=True";
             string query = "SELECT * FROM productsAll WHERE Name = @SelectedItem";
 
             using (SqlConnection connection = new SqlConnection(connectionString))

@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Retailerlitebeta\\",
-  "Documents": [],
+  "WorkspaceRootPath": "G:\\Repo\\Retailerlitebeta\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|g:\\repo\\retailerlitebeta\\newbill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|solutionrelative:newbill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NewBill.cs",
+              "DocumentMoniker": "G:\\Repo\\Retailerlitebeta\\NewBill.cs",
+              "RelativeDocumentMoniker": "NewBill.cs",
+              "ToolTip": "G:\\Repo\\Retailerlitebeta\\NewBill.cs",
+              "RelativeToolTip": "NewBill.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAALgAAACsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T16:44:24.225Z",
+              "EditorCaption": ""
             }
           ]
         }
