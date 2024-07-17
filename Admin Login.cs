@@ -12,6 +12,12 @@ namespace Retailerlitebeta
 {
     public partial class Admin_Login : Form
     {
+        private string storedPassword = "pub123";
+        public string StoredPassword
+        {
+            get { return storedPassword; }
+            set { storedPassword = value; }
+        }
         public Admin_Login()
         {
             InitializeComponent();
@@ -24,16 +30,34 @@ namespace Retailerlitebeta
 
         private void btnAdmlogin_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Blaze33")
+            string enteredPassword = textBox1.Text;
+            if (ValidatePassword(enteredPassword))
             {
-                this.Hide();
+                MessageBox.Show("Login successful.");
                 Admin_Dashboard admin_Dashboard = new Admin_Dashboard();
                 admin_Dashboard.Show();
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Password is Incorrect! Try Again.");
+                MessageBox.Show("Incorrect password. Please try again.");
             }
+        }
+        private bool ValidatePassword(string enteredPassword)
+        {
+            // Validate the entered password
+            return enteredPassword == storedPassword;
+        }
+        private void OpenResetPasswordForm()
+        {
+            // Open the Reset Password form
+            ResetPassword resetPasswordForm = new ResetPassword(this);
+            resetPasswordForm.ShowDialog();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+             OpenResetPasswordForm();
         }
     }
 }

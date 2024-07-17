@@ -272,3 +272,4 @@ G:\Repo\Retailerlitebeta\bin\Debug\System.ClientModel.dll
 G:\Repo\Retailerlitebeta\bin\Debug\System.ClientModel.xml
 G:\Repo\Retailerlitebeta\obj\Debug\Retailerlitebeta.csproj.SuggestedBindingRedirects.cache
 G:\Repo\Retailerlitebeta\obj\Debug\Retailerlitebeta.exe.config
+G:\Repo\Retailerlitebeta\obj\Debug\Retailerlitebeta.ResetPassword.resources

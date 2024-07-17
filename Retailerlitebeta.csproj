@@ -197,6 +197,12 @@
     <Compile Include="Inventory_Editor.Designer.cs">
       <DependentUpon>Inventory_Editor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="RetailerlitebetaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory_Editor.resx">
       <DependentUpon>Inventory_Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TodaySummary.resx">
       <DependentUpon>TodaySummary.cs</DependentUpon>

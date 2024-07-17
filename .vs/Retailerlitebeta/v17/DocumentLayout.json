@@ -3,7 +3,23 @@
   "WorkspaceRootPath": "G:\\Repo\\Retailerlitebeta\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|g:\\repo\\retailerlitebeta\\newbill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|g:\\repo\\retailerlitebeta\\admin login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|solutionrelative:admin login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|G:\\Repo\\Retailerlitebeta\\admin login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|solutionrelative:admin login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|G:\\Repo\\Retailerlitebeta\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|solutionrelative:resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|G:\\Repo\\Retailerlitebeta\\resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|solutionrelative:resetpassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|G:\\Repo\\Retailerlitebeta\\newbill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA358014-5649-4799-9338-4A25D8D8E226}|Retailerlitebeta.csproj|solutionrelative:newbill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,7 +38,54 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResetPassword.cs",
+              "DocumentMoniker": "G:\\Repo\\Retailerlitebeta\\ResetPassword.cs",
+              "RelativeDocumentMoniker": "ResetPassword.cs",
+              "ToolTip": "G:\\Repo\\Retailerlitebeta\\ResetPassword.cs",
+              "RelativeToolTip": "ResetPassword.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T12:39:43.854Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Admin Login.cs",
+              "DocumentMoniker": "G:\\Repo\\Retailerlitebeta\\Admin Login.cs",
+              "RelativeDocumentMoniker": "Admin Login.cs",
+              "ToolTip": "G:\\Repo\\Retailerlitebeta\\Admin Login.cs",
+              "RelativeToolTip": "Admin Login.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T11:32:07.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Admin Login.cs [Design]",
+              "DocumentMoniker": "G:\\Repo\\Retailerlitebeta\\Admin Login.cs",
+              "RelativeDocumentMoniker": "Admin Login.cs",
+              "ToolTip": "G:\\Repo\\Retailerlitebeta\\Admin Login.cs [Design]",
+              "RelativeToolTip": "Admin Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T11:26:08.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ResetPassword.cs [Design]",
+              "DocumentMoniker": "G:\\Repo\\Retailerlitebeta\\ResetPassword.cs",
+              "RelativeDocumentMoniker": "ResetPassword.cs",
+              "ToolTip": "G:\\Repo\\Retailerlitebeta\\ResetPassword.cs [Design]",
+              "RelativeToolTip": "ResetPassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T11:32:51.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "NewBill.cs",
               "DocumentMoniker": "G:\\Repo\\Retailerlitebeta\\NewBill.cs",
               "RelativeDocumentMoniker": "NewBill.cs",
@@ -30,8 +93,7 @@
               "RelativeToolTip": "NewBill.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAALgAAACsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T16:44:24.225Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-05T16:44:24.225Z"
             }
           ]
         }
